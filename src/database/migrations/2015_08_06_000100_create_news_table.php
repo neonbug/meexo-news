@@ -18,7 +18,7 @@ class CreateNewsTable extends Migration {
 			$table->boolean('published');
 			$table->timestamp('published_from_date');
 			$table->integer('id_user');
-			$table->string('main_image', 255);
+			$table->string('main_image', 255)->nullable();
 			$table->timestamps();
 			
 			$table->foreign('id_user')->references('id_user')->on('user');
