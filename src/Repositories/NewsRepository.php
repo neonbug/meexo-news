@@ -18,6 +18,7 @@ class NewsRepository {
 		return $model::where('published', true)
 			->where('published_from_date', '<=', date('Y-m-d'))
 			->orderBy('published_from_date', 'DESC')
+			->orderBy('updated_at', 'DESC')
 			->limit($this->latest_items_limit)
 			->get();
 	}
