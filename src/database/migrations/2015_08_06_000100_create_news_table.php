@@ -17,7 +17,7 @@ class CreateNewsTable extends Migration {
 			$table->increments('id_news');
 			$table->boolean('published');
 			$table->timestamp('published_from_date');
-			$table->integer('id_user');
+			$table->integer('id_user')->unsigned();
 			$table->string('main_image', 255)->nullable();
 			$table->timestamps();
 			
